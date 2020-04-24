@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WheatherApp</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header-top">
+            <h1>Welcome to my weather app..</h1>
+            <p>Enter your city name below..</p>
+        </div>
+        <div class="content-form">
+            <form method="POST">
+                <input type="text" name="city" placeholder="Enter the City..">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="wheather-data">
+            <% if(temp !== null) { %>
+            <h1 class="temp"> <%= temp %></h1>
+            <% } %>
+            <div class="icons-des">
+                <% if(icon !== null) { %>
+                <img class="icon" src="http://openweathermap.org/img/w/<%= icon %>.png" alt="image">
+                <% } %>
+
+                <% if(des !== null) { %>
+                <h3><%= des %></h3>
+                <% } %>
+
+            </div>
+            <% if (city != null) { %>
+            <p class="city"><%= city %></p>
+            <% } %>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

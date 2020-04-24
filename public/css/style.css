@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(0, 195, 255);
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+    width: 400px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 4px 4px 10px rgb(0, 147, 192),
+                -4px -4px 10px rgb(166, 221, 238);
+    border-radius: 15px;
+}
+.header .header-top{
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.header-top h1{
+    font-size: 1.3em;
+    color: rgb(53, 52, 52);
+}
+.header-top p{
+    margin: 1em 0;
+}
+.header .content-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content-form form input{
+    width: 300px;
+    height: 35px;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0.7em 0;
+    border-bottom: 2px solid rgb(53,52,52);
+}
+.content-form form input::placeholder{
+    color: rgb(238, 194, 194);
+}
+.content-form form button{
+    margin: 2em;
+    background: none;
+    border: 2px solid rgb(53,52,52);
+    padding: 0.4em 2em;
+    position: relative;
+}
+.content-form form button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(53,52,52);
+    transition: 0.4s ease;
+    z-index: -1;
+}
+.content-form form button:hover{
+    color: rgb(0, 195, 255);
+}
+.content-form form button:hover::before{
+    width: 100%;
+}
+.wheather-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+.wheather-data .icons-des{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
